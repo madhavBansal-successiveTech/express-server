@@ -1,0 +1,20 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "pattern  project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhavBansal-successiveTech/express-server.git"
+  },
+  "author": "madhav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhavBansal-successiveTech/express-server/issues"
+  },
+  "homepage": "https://github.com/madhavBansal-successiveTech/express-server#readme"
+}
