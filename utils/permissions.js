@@ -6,12 +6,12 @@ let permissions = {
         delete: [],
     }
 }
-let hasPermission = (moduleName, role, permissionType) => {
+export let hasPermission = (moduleName, role, permissionType) => {
     let find_index = (value) => {
         return value.toLowerCase() === role.toLowerCase()
     }
     if (permissions.hasOwnProperty(moduleName)) {
-        for(permission in permissionType){
+        for(let permission in permissionType){
             if (permissions[moduleName].hasOwnProperty(permissionType[permission])) {
                 let index = permissions[moduleName][permissionType[permission]].findIndex(find_index)
                 if (index === -1) {
@@ -32,7 +32,3 @@ let hasPermission = (moduleName, role, permissionType) => {
         return false;
     }
 }
-if (hasPermission('getUsers', 'trainer', ['read', 'write']))
-    console.log('The provided permission is correct')
-else
-    console.log('The provided permission is incorrect')
