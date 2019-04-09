@@ -1,0 +1,8 @@
+#to ignore package.json
+/package-lock.json
+#to ignore node_modules
+/node_modules
+#to ignore dist folder
+/dist
+#to ignore .env
+/.env

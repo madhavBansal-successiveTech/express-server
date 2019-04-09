@@ -22,7 +22,7 @@ let printSecondHalfPattern = (noOfRows) => {
 
     }
 }
-export let printPattern = (noOfRows) => {
+export default function printPattern(noOfRows){
     console.log(`Print a Daimond with rows ${noOfRows}`);
     printFirstHalfPattern(noOfRows);
     printSecondHalfPattern(noOfRows);

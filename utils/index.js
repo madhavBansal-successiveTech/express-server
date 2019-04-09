@@ -1,2 +1,2 @@
-export {hasPermission} from './permissions';
-export{users,validateUsers} from './validation';
+export {default as hasPermission} from './permissions';
+export{default as validateUsers,users} from './validation';

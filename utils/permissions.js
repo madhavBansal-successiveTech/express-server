@@ -1,12 +1,5 @@
-let permissions = {
-    'getUsers': {
-        all: ['head-trainer'],
-        read: ['trainee', 'trainer'],
-        write: ['trainer'],
-        delete: [],
-    }
-}
-export let hasPermission = (moduleName, role, permissionType) => {
+import {permissions} from '../extra/constants'
+export default function hasPermission(moduleName, role, permissionType){
     let find_index = (value) => {
         return value.toLowerCase() === role.toLowerCase()
     }
