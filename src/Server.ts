@@ -21,7 +21,7 @@ export class Server {
           })
         
           
-          app.use('/',traineeRoutes);
+          app.use('/api',traineeRoutes);
           app.use(notFoundRoute);
           app.use(errorHandler);
           
