@@ -12,14 +12,15 @@ export default class CheckPermission {
         if (this.permissions.hasOwnProperty(moduleName)) {
             for (let permission in permissionType) {
                 if (this.permissions[moduleName].hasOwnProperty(permissionType[permission])) {
-                    let index:number = this.permissions[moduleName][permissionType[permission]].findIndex(find_index)
-                    if (index === -1) {
-                        console.log(`Permission "${permissionType[permission]}" is not given for the role "${role}"`);
+                    let index:number = this.permissions[moduleName][permissionType[permission]].findIndex(find_index);
+                    let indexForAll:number=this.permissions[moduleName]["all"].findIndex(find_index);
+                    if (index === -1 && indexForAll===-1) {
+                        console.log(`Permission not allowed for the user "${permissionType[permission]}"`);
                         return false;
                     }
 
                 }
-                else {//if user has provided permissions apart from all/read/write/delete
+                else {//if user has provided permissions apart from read/write/delete
                     console.log(`"${permissionType[permission]}" permission does not exist`)
                     return false;
                 }
