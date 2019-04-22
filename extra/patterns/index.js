@@ -1,3 +1,3 @@
-export { printPattern as daimond } from './daimond'
-export { printPattern as equilateral } from './Equilateral'
+export { default as  daimond } from './daimond'
+export { default as  equilateral } from './Equilateral'
 
