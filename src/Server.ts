@@ -4,8 +4,8 @@ import * as bodyParser from 'body-parser';
 import {app as notFoundRoute}  from './libs/routes/notFoundRoute'
  import {errorHandler} from './libs/routes/errorHandler'
 import {app as traineeRoutes} from './controllers/trainee/routes';
+import {Database} from './libs/Database';
 let app = express();
-
 export class Server {
 
      config: IConfig
@@ -30,6 +30,7 @@ export class Server {
           try {
                app.listen(this.config.PORT, () => {
                     console.log(`Server started at PORT ${this.config.PORT}`);
+                    new Database().open(this.config.MONGO_URL);
 
                })
           }

@@ -6,3 +6,4 @@
 /dist
 #to ignore .env
 /.env
+/.czrc
